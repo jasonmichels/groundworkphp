@@ -1,0 +1,32 @@
+{
+  "name": "groundworkphp/groundwork",
+  "description": "Groundwork is a PHP micro framework built on PHP 7",
+  "keywords": ["groundwork", "framework", "php", "groundworkphp", "php7"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jason Michels",
+      "email": "michelsja@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "monolog/monolog": "^1.17",
+    "phing/phing": "^2.13",
+    "phpunit/phpunit": "^5.1",
+    "mockery/mockery": "0.9.*",
+    "halleck45/php-metrics": "dev-master",
+    "squizlabs/php_codesniffer": "dev-master",
+    "sebastian/phpcpd": "*",
+    "phpmd/phpmd" : "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Groundwork\\": "src",
+      "Groundwork\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev"
+}
