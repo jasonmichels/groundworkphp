@@ -16,9 +16,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
  */
 class App implements Application
 {
-    const HTTP_REQUEST_POST = 'POST';
-    const HTTP_REQUEST_GET = 'GET';
-
     /**
      * @var string
      */
@@ -57,7 +54,7 @@ class App implements Application
      */
     public function post(string $route, callable $callable)
     {
-        $this->appendRouteRequest($route, $callable, self::HTTP_REQUEST_POST);
+        $this->appendRouteRequest($route, $callable, Router::HTTP_REQUEST_POST);
         return $this;
     }
 
@@ -70,7 +67,7 @@ class App implements Application
      */
     public function get(string $route, callable $callable)
     {
-        $this->appendRouteRequest($route, $callable, self::HTTP_REQUEST_GET);
+        $this->appendRouteRequest($route, $callable, Router::HTTP_REQUEST_GET);
         return $this;
     }
 
@@ -99,14 +96,13 @@ class App implements Application
     {
         $response = new JsonResponse();
 
-        $this->router->match(
+        $this->router->dispatch(
             $this->requestUri,
             $this->requestMethod,
-            function (RouteRequest $routeRequest) use ($response) {
-                $response = call_user_func($routeRequest->callable, $response);
+            function (callable $callable, array $args = []) use ($response) {
+                $response = call_user_func_array($callable, [$response, $args]);
                 $response->send();
-            }
-        );
+        });
 
         return $this;
     }

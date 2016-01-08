@@ -1,6 +1,9 @@
 <?php namespace Groundwork\Http;
 
+use Groundwork\Exceptions\MethodNotAllowed;
 use Groundwork\Exceptions\NotFound;
+use FastRoute;
+use FastRoute\Dispatcher\GroupCountBased;
 
 /**
  * Class Router
@@ -13,12 +16,20 @@ use Groundwork\Exceptions\NotFound;
  */
 class Router
 {
+    const HTTP_REQUEST_POST = 'POST';
+    const HTTP_REQUEST_GET = 'GET';
+
     /**
      * Route request collection
      *
      * @var array
      */
     protected $routeRequestCollection = [];
+
+    /**
+     * @var GroupCountBased
+     */
+    protected $dispatcher;
 
     /**
      * Append new route request to the collection
@@ -47,30 +58,49 @@ class Router
     }
 
     /**
-     * Match a request to a route request
+     * Register necessary routes with route provider
+     */
+    protected function registerRoutes()
+    {
+        $this->dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $routeCollector) {
+
+            $this->each(function (RouteRequest $routeRequest) use ($routeCollector) {
+                $routeCollector->addRoute($routeRequest->method, $routeRequest->route, $routeRequest->callable);
+            });
+
+        });
+    }
+
+    /**
+     * Dispatch router
      *
      * @param string $requestUri
      * @param string $requestMethod
      * @param callable $callable
      * @return $this
+     * @throws MethodNotAllowed
      * @throws NotFound
      */
-    public function match(string $requestUri, string $requestMethod, callable $callable)
+    public function dispatch(string $requestUri, string $requestMethod, callable $callable)
     {
-        $match = false;
+        $this->registerRoutes();
 
-        $this->each(function (RouteRequest $routeRequest) use ($requestUri, $requestMethod, $callable, &$match)  {
-
-            if ($routeRequest->match($requestUri, $requestMethod)) {
-                call_user_func($callable, $routeRequest);
-                $match = true;
-            }
-
-        });
-
-        if (!$match) {
-            throw new NotFound('Unable to match request for route ' . $requestUri . ' and method: ' . $requestMethod);
+        $routeInfo = $this->dispatcher->dispatch($requestMethod, $requestUri);
+        switch ($routeInfo[0]) {
+            case FastRoute\Dispatcher::NOT_FOUND:
+                throw new NotFound('Unable to match request for route ' . $requestUri . ' and method: ' . $requestMethod);
+                break;
+            case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
+                $allowedMethods = $routeInfo[1];
+                throw new MethodNotAllowed($requestMethod . ' is not allowed for route', 0, null, $allowedMethods);
+                break;
+            case FastRoute\Dispatcher::FOUND:
+                $handler = $routeInfo[1];
+                $vars = $routeInfo[2];
+                call_user_func_array($callable, [$handler, $vars]);
+                break;
         }
+
         return $this;
     }
 }
