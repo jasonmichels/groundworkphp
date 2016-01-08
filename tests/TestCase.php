@@ -5,9 +5,7 @@ use PHPUnit_Framework_TestCase;
 /**
  * Class TestCase
  *
- * Base test case
- *
- * @package Fisdap\Aiken\Parser\Tests
+ * @package Groundwork\Tests
  * @author Jason Michels
  * @version $Id$
  */
