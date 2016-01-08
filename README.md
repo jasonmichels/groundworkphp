@@ -1,4 +1,4 @@
-### Groundwork PHP 7 framework
+### Groundwork - PHP 7 framework
 
 ### Introduction
 Groundwork is a PHP 7 microframework
