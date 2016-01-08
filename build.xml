@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Aiken Parser" basedir="." default="check">
+<project name="Groundwork PHP Framework" basedir="." default="check">
 
     <property name="dir.base" value="${project.basedir}" />
     <property name="dir.src" value="${project.basedir}/src"/>
