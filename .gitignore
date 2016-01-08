@@ -6,3 +6,5 @@ Thumbs.db
 /build
 build.properties
 docker-compose.yml
+/public
+Dockerfile

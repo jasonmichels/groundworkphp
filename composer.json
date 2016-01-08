@@ -11,8 +11,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "symfony/http-foundation": "^3.0",
-    "monolog/monolog": "^1.17"
+    "symfony/http-foundation": "^3.0"
   },
   "require-dev": {
     "phing/phing": "^2.13",

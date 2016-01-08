@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "977e04215985ef486a3f01edaeac7559",
-    "content-hash": "6a91929c5037decee67c7c384c1d47db",
+    "hash": "a937b4e9dda19fddc6bbe28223d951f9",
+    "content-hash": "f25a73ef08479ce4f79c1f6b254c8867",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -84,6 +84,49 @@
                 "psr-3"
             ],
             "time": "2015-12-18 18:24:15"
+        },
+        {
+            "name": "nikic/fast-route",
+            "version": "v0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "8164b4a0d8afde4eae5f1bfc39084972ba23ad36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/8164b4a0d8afde4eae5f1bfc39084972ba23ad36",
+                "reference": "8164b4a0d8afde4eae5f1bfc39084972ba23ad36",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2015-12-20 19:50:12"
         },
         {
             "name": "psr/log",
@@ -1610,12 +1653,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "61ea97f7467086b65efd26cf924c4a7ca0fbb2a6"
+                "reference": "938daf8e6ebe8ebf085fd1c37431990d3aa78eb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/61ea97f7467086b65efd26cf924c4a7ca0fbb2a6",
-                "reference": "61ea97f7467086b65efd26cf924c4a7ca0fbb2a6",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/938daf8e6ebe8ebf085fd1c37431990d3aa78eb4",
+                "reference": "938daf8e6ebe8ebf085fd1c37431990d3aa78eb4",
                 "shasum": ""
             },
             "require": {
@@ -1676,7 +1719,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-12-17 14:44:35"
+            "time": "2016-01-08 13:50:59"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
