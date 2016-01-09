@@ -1,11 +1,11 @@
-<?php namespace GroundworkPHP\Contracts;
+<?php namespace GroundworkPHP\Framework\Contracts;
 
-use GroundworkPHP\Exceptions\NotFound;
+use GroundworkPHP\Framework\Exceptions\NotFound;
 
 /**
  * Interface Application
  *
- * @package GroundworkPHP\Contracts
+ * @package GroundworkPHP\Framework\Contracts
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */
