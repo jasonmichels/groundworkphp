@@ -9,7 +9,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Groundwork Test Suite">
+        <testsuite name="GroundworkPHP Test Suite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
