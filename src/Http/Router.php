@@ -1,7 +1,7 @@
-<?php namespace GroundworkPHP\Http;
+<?php namespace GroundworkPHP\Framework\Http;
 
-use GroundworkPHP\Exceptions\MethodNotAllowed;
-use GroundworkPHP\Exceptions\NotFound;
+use GroundworkPHP\Framework\Exceptions\MethodNotAllowed;
+use GroundworkPHP\Framework\Exceptions\NotFound;
 use FastRoute;
 use FastRoute\Dispatcher\GroupCountBased;
 
@@ -10,7 +10,7 @@ use FastRoute\Dispatcher\GroupCountBased;
  *
  * Router will match routes
  *
- * @package GroundworkPHP\Http
+ * @package GroundworkPHP\Framework\Http
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */

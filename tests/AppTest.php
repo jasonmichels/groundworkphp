@@ -1,10 +1,10 @@
-<?php namespace GroundworkPHP\Tests;
+<?php namespace GroundworkPHP\Framework\Tests;
 
-use GroundworkPHP\App;
-use GroundworkPHP\Http\Router;
-use GroundworkPHP\Tests\TestCase;
+use GroundworkPHP\Framework\App;
+use GroundworkPHP\Framework\Http\Router;
+use GroundworkPHP\Framework\Tests\TestCase;
 use \Mockery as mockery;
-use GroundworkPHP\Contracts\Application;
+use GroundworkPHP\Framework\Contracts\Application;
 
 /**
  * Class AppTest

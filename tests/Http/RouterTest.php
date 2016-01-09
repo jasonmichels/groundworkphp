@@ -1,6 +1,6 @@
-<?php namespace GroundworkPHP\Tests\Http;
+<?php namespace GroundworkPHP\Framework\Tests\Http;
 
-use GroundworkPHP\Tests\TestCase;
+use GroundworkPHP\Framework\Tests\TestCase;
 use \Mockery as mockery;
 
 /**
@@ -8,7 +8,7 @@ use \Mockery as mockery;
  *
  * Tests for the router class
  *
- * @package GroundworkPHP\Tests\Http
+ * @package GroundworkPHP\Framework\Tests\Http
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */
