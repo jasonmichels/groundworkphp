@@ -1,11 +1,11 @@
-<?php namespace Groundwork\Http;
+<?php namespace GroundworkPHP\Http;
 
 /**
  * Class RouteRequest
  *
  * An instance of a route
  *
- * @package Groundwork\Http
+ * @package GroundworkPHP\Http
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */

@@ -1,11 +1,11 @@
-<?php namespace Groundwork\Exceptions;
+<?php namespace GroundworkPHP\Exceptions;
 
 /**
  * Class NotFound
  *
  * Not found exception
  *
- * @package Groundwork\Exceptions
+ * @package GroundworkPHP\Exceptions
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */

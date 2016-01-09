@@ -1,15 +1,15 @@
-### Groundwork - PHP 7 framework
+### GroundworkPHP - PHP 7 micro framework
 
 ### Introduction
-Groundwork is a PHP 7 microframework
+GroundworkPHP is a PHP 7 micro framework
 
 ### Example
 ```php
 declare(strict_types=1);
 require('../vendor/autoload.php');
 
-use Groundwork\App;
-use Groundwork\Http\Router;
+use GroundworkPHP\App;
+use GroundworkPHP\Http\Router;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];
@@ -36,7 +36,7 @@ $ phpunit
 
 ### License
 
-Groundwork is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+GroundworkPHP is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 Authors
 ----
