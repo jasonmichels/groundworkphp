@@ -8,8 +8,8 @@ GroundworkPHP is a PHP 7 micro framework
 declare(strict_types=1);
 require('../vendor/autoload.php');
 
-use GroundworkPHP\App;
-use GroundworkPHP\Http\Router;
+use GroundworkPHP\Framework\App;
+use GroundworkPHP\Framework\Http\Router;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];

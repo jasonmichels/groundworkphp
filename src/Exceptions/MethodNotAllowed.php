@@ -1,11 +1,11 @@
-<?php namespace GroundworkPHP\Exceptions;
+<?php namespace GroundworkPHP\Framework\Exceptions;
 
 /**
  * Class MethodNotAllowed
  *
  * Method not allowed exception
  *
- * @package GroundworkPHP\Exceptions
+ * @package GroundworkPHP\Framework\Exceptions
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */

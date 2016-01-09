@@ -1,8 +1,8 @@
-<?php namespace GroundworkPHP;
+<?php namespace GroundworkPHP\Framework;
 
-use GroundworkPHP\Contracts\Application;
-use GroundworkPHP\Http\RouteRequest;
-use GroundworkPHP\Http\Router;
+use GroundworkPHP\Framework\Contracts\Application;
+use GroundworkPHP\Framework\Http\RouteRequest;
+use GroundworkPHP\Framework\Http\Router;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
  *
  * Groundwork application
  *
- * @package GroundworkPHP
+ * @package GroundworkPHP\Framework
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */
