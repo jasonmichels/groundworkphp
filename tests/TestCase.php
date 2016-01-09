@@ -1,11 +1,11 @@
-<?php namespace Groundwork\Tests;
+<?php namespace GroundworkPHP\Tests;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Class TestCase
  *
- * @package Groundwork\Tests
+ * @package GroundworkPHP\Tests
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */

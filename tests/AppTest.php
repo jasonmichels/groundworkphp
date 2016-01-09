@@ -1,17 +1,17 @@
-<?php namespace Groundwork\Tests;
+<?php namespace GroundworkPHP\Tests;
 
-use Groundwork\App;
-use Groundwork\Http\Router;
-use Groundwork\Tests\TestCase;
+use GroundworkPHP\App;
+use GroundworkPHP\Http\Router;
+use GroundworkPHP\Tests\TestCase;
 use \Mockery as mockery;
-use Groundwork\Contracts\Application;
+use GroundworkPHP\Contracts\Application;
 
 /**
  * Class AppTest
  *
  * Tests for main application code
  *
- * @package Groundwork\Tests
+ * @package GroundworkPHP\Tests
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */
