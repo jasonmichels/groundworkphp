@@ -1,5 +1,6 @@
 <?php namespace GroundworkPHP\Framework\Http;
 
+use GroundworkPHP\Framework\Contracts\Http\Router as RouterInterface;
 use GroundworkPHP\Framework\Exceptions\MethodNotAllowed;
 use GroundworkPHP\Framework\Exceptions\NotFound;
 use FastRoute;
@@ -14,11 +15,8 @@ use FastRoute\Dispatcher\GroupCountBased;
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */
-class Router
+class Router implements RouterInterface
 {
-    const HTTP_REQUEST_POST = 'POST';
-    const HTTP_REQUEST_GET = 'GET';
-
     /**
      * Route request collection
      *
@@ -49,7 +47,7 @@ class Router
      * @param callable $callable
      * @return $this
      */
-    public function each(callable $callable)
+    protected function each(callable $callable)
     {
         foreach ($this->routeRequestCollection as $routeRequest) {
             call_user_func($callable, $routeRequest);

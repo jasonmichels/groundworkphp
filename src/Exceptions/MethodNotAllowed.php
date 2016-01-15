@@ -1,5 +1,7 @@
 <?php namespace GroundworkPHP\Framework\Exceptions;
 
+use GroundworkPHP\Framework\Contracts\Exceptions\MethodNotAllowed as MethodNotAllowedInterface;
+
 /**
  * Class MethodNotAllowed
  *
@@ -9,10 +11,8 @@
  * @author Jason Michels <michelsja@gmail.com>
  * @version $Id$
  */
-class MethodNotAllowed extends \Exception
+class MethodNotAllowed extends \Exception implements MethodNotAllowedInterface
 {
-    const HTTP_STATUS_CODE = 405;
-
     /**
      * Allowed methods for API
      * @todo Implement this feature

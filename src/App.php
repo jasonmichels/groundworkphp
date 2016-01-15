@@ -2,7 +2,7 @@
 
 use GroundworkPHP\Framework\Contracts\Application;
 use GroundworkPHP\Framework\Http\RouteRequest;
-use GroundworkPHP\Framework\Http\Router;
+use GroundworkPHP\Framework\Contracts\Http\Router;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
