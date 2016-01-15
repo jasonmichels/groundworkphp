@@ -13,15 +13,30 @@ class MethodNotAllowed extends \Exception
 {
     const HTTP_STATUS_CODE = 405;
 
-    public $allowedMethods = [];
+    /**
+     * Allowed methods for API
+     * @todo Implement this feature
+     * @var array
+     */
+    public $allowedMethods;
 
-    public function __construct($message, $code = 0, \Exception $previous = null, $allowedMethods)
+    /**
+     * MethodNotAllowed constructor.
+     *
+     * @param string $message
+     * @param int $code
+     * @param \Exception|null $previous
+     * @param array $allowedMethods
+     */
+    public function __construct($message, $code = 0, \Exception $previous = null, $allowedMethods = [])
     {
         parent::__construct($message, $code, $previous);
         $this->allowedMethods = $allowedMethods;
     }
 
     /**
+     * Get title of exception
+     *
      * @return string
      */
     public function getTitle()

@@ -62,7 +62,7 @@ class Router
      */
     protected function registerRoutes()
     {
-        $this->dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $routeCollector) {
+        $this->dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $routeCollector) {
 
             $this->each(function (RouteRequest $routeRequest) use ($routeCollector) {
                 $routeCollector->addRoute($routeRequest->method, $routeRequest->route, $routeRequest->callable);

@@ -102,7 +102,8 @@ class App implements Application
             function (callable $callable, array $args = []) use ($response) {
                 $response = call_user_func_array($callable, [$response, $args]);
                 $response->send();
-        });
+            }
+        );
 
         return $this;
     }
